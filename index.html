@@ -71,34 +71,6 @@
     }
     </style>
 
-    <style>
-      {
-          box-sizing: border-box;
-      }
-      /* Set additional styling options for the columns */
-      .column {
-      float: left;
-      }
-
-      /* Set width length for the left, right and middle columns */
-      .left {
-      width: 20%;
-      }
-
-      .middle {
-      width: 30%;
-      }
-      
-      .right {
-      width: 50%;
-      }
-
-      .row:after {
-      content: "";
-      display: table;
-      clear: both;
-      }
-      </style>
 </head>
 
 <body>
@@ -178,21 +150,13 @@
         <!--Start Text Only-->
         <div class="flex-row">
           <div class="flex-item flex-column">
-
-            <div class="row">
-              <div class="column left">
-                  <h2><a class="menu-embedding" href="schedule.html">Schedule </a> </h2>
-                 
-              </div>
-              <div class="column middle">
-                  <h2><a class="menu-embedding" href="hackathon-overview.html">Hackathon </a> </h2>
-                  
-              </div>
-              <div class="column right">
-                  <h2><a class="menu-embedding" href="faq.html">F.A.Q </a></h2>
-          
-              </div>
-          </div>
+            <table>
+              <tr>
+               <th><a class="menu-embedding" href="schedule.html">Schedule </a> </th>
+               <th><a class="menu-embedding" href="hackathon-overview.html">Hackathon </a></th>
+               <th><a class="menu-embedding" href="faq.html">F.A.Q </a></th>
+              </tr>
+            </table>
            <hr>
   
           <h2 id="What-is=KRIA?">What is the KRIA SOM Board?</h2>
