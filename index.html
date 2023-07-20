@@ -21,14 +21,73 @@
       font-weight: 700 !important;
     }
   </style>
+
+  <style>
+    .marquee {
+    height: 50px;	
+    overflow: hidden;
+    position: relative;
+    background: rgb(76, 76, 74);
+    color: rgb(251, 15, 15);
+    font-size: x-large;
+    border: 3px solid rgb(255, 0, 238);
+    }
+    .marquee p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    /* Starting position */
+    -moz-transform:translateX(100%);
+    -webkit-transform:translateX(100%);	
+    transform:translateX(100%);
+    /* Apply animation to this element */	
+    -moz-animation: scroll-left 5s linear infinite;
+    -webkit-animation: scroll-left 5s linear infinite;
+    animation: scroll-left 5s linear infinite;
+    }
+    /* Move it (define the animation) */
+    @-moz-keyframes scroll-left {
+    0%   { -moz-transform: translateX(100%); }
+    100% { -moz-transform: translateX(-100%); }
+    }
+    @-webkit-keyframes scroll-left {
+    0%   { -webkit-transform: translateX(100%); }
+    100% { -webkit-transform: translateX(-100%); }
+    }
+    @keyframes scroll-left {
+    0%   { 
+    -moz-transform: translateX(100%); /* Browser bug fix */
+    -webkit-transform: translateX(100%); /* Browser bug fix */
+    transform: translateX(100%); 		
+    }
+    100% { 
+    -moz-transform: translateX(-100%); /* Browser bug fix */
+    -webkit-transform: translateX(-100%); /* Browser bug fix */
+    transform: translateX(-100%); 
+    }
+    }
+    </style>
+  
 </head>
 
 <body>
   <div class="menu-container"></div>
   <div class="content-container">
     <!-------------------------------------------------------------------------------------------->
-    <!--Start Header-->
-    <div class="banner" style="background: url('img/kv260.png') no-repeat center; background-size: cover; height: 500px;"></div>
+    <!--Scrolling Text-->
+  
+    <div class="marquee">
+      <p> Welcome to the 2023 PYNQ Bootcamp!</p>
+
+
+
+      </p>
+      </div>
+    <!--Backgroudn --> 
+    <div class="banner" style="background: url('img/kv260.png') no-repeat center; background-size: cover; height: 300px;"></div>
     <div class="banner">
       <div class="banner-table flex-column">
         <div class="flex-row">
@@ -46,55 +105,56 @@
     <!-------------------------------------------------------------------------------------------->
     <div class="content">
       <div class="content-table flex-column">
-        <!-------------------------------------------------------------------------------------------->
-
+        <!---------------------UPDATES----------------------------------------------->
+<!-- 
         <h2>Bootcamp Updates</h2>
         <hr>
-        <ol>
+        <ul>
           <li>          
             <marquee behavior="scroll" direction="left">
-              <!-- Write whatever text between here  -->
+              
            
            <strong>Welcome to the 2023 PYNQ Bootcamp! </strong>  
-              <!-- and here  -->
+              
            </marquee> 
            <hr>
           </li>
 
           <li>          
             <marquee behavior="scroll" direction="left">
-              <!-- Write whatever text between here  -->
-        
-              <!-- and here  -->
+            
            </marquee> 
            <hr>
           </li>
 
           <li>          
             <marquee behavior="scroll" direction="left">
-              <!-- Write whatever text between here  -->
          
-              <!-- and here  -->
            </marquee>
            <hr> 
           </li>
 
           <li>          
             <marquee behavior="scroll" direction="left">
-              <!-- Write whatever text between here  -->
-        
-              <!-- and here  -->
+             
            </marquee> 
            <hr>
           </li>
 
 
-        </ol>
-       
+        </ul>
+        -->
         <!-------------------------------------------------------------------------------------------->
         <!--Start Text Only-->
         <div class="flex-row">
           <div class="flex-item flex-column">
+
+           <h2><a class="menu-embedding" href="schedule.html">Schedule </a></h2>
+           <hr>
+           <h2><a class="menu-embedding" href="hackathon-overview.html">Hackathon </a></h2>
+           <hr>
+           <h2><a class="menu-embedding" href="faq.html">Frequently Asked Questions </a></h2>
+           <hr>
           <h2 id="What-is=KRIA?">What is the KRIA SOM Board?</h2>
             <hr>
             <p class="text">
@@ -104,6 +164,8 @@
               machine that can fit in the palm of your hand! These boards have a wide range of applications that include: robotics, 
               industrial communication, security cameras and more. This make a perfect platform to get started working with AI. 
 
+              <h2><a href="https://www.xilinx.com/products/som/kria.html">AMD's Website for KRIA SOM</a></h2>
+              <h2><a href="https://www.xilinx.com/products/som/kria/kv260-vision-starter-kit/kv260-getting-started/getting-started.html">AMD's KRIA Getting Started</a></h2>
             </p>
 
           </div>
